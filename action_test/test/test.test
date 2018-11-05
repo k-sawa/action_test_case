@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+  <node name="server" pkg="action_test" type="server" output="screen"/>
+  <test pkg="action_test" test-name="SimpleClient" type="test_client" time-limit="3600.0"/>
+</launch>

@@ -1,0 +1,4 @@
+<launch>
+  <node name="server" pkg="action_test" type="server" required="true" output="screen" launch-prefix="xterm -ls -xrm 'XTerm*selectToClipboard: true' -e" />
+  <node name="client" pkg="action_test" type="client" required="true" output="screen" launch-prefix="xterm -ls -xrm 'XTerm*selectToClipboard: true' -e" />
+</launch>
