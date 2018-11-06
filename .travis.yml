@@ -8,4 +8,7 @@ env:
 install:
   - git clone --depth 1 https://github.com/ros-industrial/industrial_ci.git .industrial_ci  
 script: 
-- travis_wait 30 .industrial_ci/ci.sh
+  - while sleep 5m; do echo "=====[ $SECONDS seconds, buildroot still building... ]====="; done &
+  - .industrial_ci/ci.sh >> build.log 2>&1
+  # Killing background sleep loop
+  - kill %1
