@@ -9,6 +9,6 @@ install:
   - git clone --depth 1 https://github.com/ros-industrial/industrial_ci.git .industrial_ci  
 script: 
   - while sleep 5m; do echo "=====[ $SECONDS seconds, buildroot still building... ]====="; done &
-  - .industrial_ci/ci.sh >> build.log 2>&1
+  - .industrial_ci/ci.sh
   # Killing background sleep loop
   - kill %1
