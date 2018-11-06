@@ -8,4 +8,4 @@ env:
 install:
   - git clone --depth 1 https://github.com/ros-industrial/industrial_ci.git .industrial_ci  
 script: 
-- .industrial_ci/ci.sh
+- travis_wait 30 .industrial_ci/ci.sh
